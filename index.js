@@ -6,21 +6,22 @@ const clear = document.querySelector('.clear');
 const negative =document.querySelector('.negative');
 const percent =document.querySelector('.percent');
 
-let firstValue ="";
+
+let firstValue = "";
 let isFirstValue = false;
-let secondValue="";
+let secondValue= "";
 let isSecondValue = false;
 let sign = "";
 let resultValue = 0;
 
 for(let i = 0; i < numbers.length; i++){
-          numbers[i].addEventListener ('click' ,(e) => {
+          numbers[i].addEventListener('click' ,(e) => {
               let atr = e.target.getAttribute('value');
               if( isFirstValue === false) {
                   getFirstValue(atr)
               }
-              if( isFirstValue == false) {
-                    getFirstValue(atr)
+              if(isSecondValue == false) {
+                   getSecondValue(atr)
               }
           })
 }
